@@ -1,0 +1,7 @@
+{
+  "name": "SubastameApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
