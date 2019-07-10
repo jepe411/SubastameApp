@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
@@ -24,7 +23,6 @@ export class MyApp {
     public menu: MenuController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
-    public translate: TranslateService
   ) {
     this.initializeApp();
 
