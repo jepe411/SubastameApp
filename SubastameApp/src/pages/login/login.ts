@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Md5 } from 'ts-md5/dist/md5'
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'login-ionic',
@@ -10,17 +9,15 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LoginPage {
   registerPage = "RegisterPage";
+  /* ListPage = "ListPage"; */
   user: string = "";
   password: string = "";
   languages: string = "es";
   apiUrl = 'http://ec2-18-188-107-88.us-east-2.compute.amazonaws.com:9292/SubastameApi/ValidateServices/validateUser/';
   constructor(
-    public http: HttpClient,
-    public translate: TranslateService
+    public http: HttpClient
   ) {
 
-    translate.setDefaultLang('es');
-    translate.use('es');
   }
 
   login() {
@@ -37,8 +34,5 @@ export class LoginPage {
     });
   }
 
-  changeLanguages() {
-    this.translate.use(this.languages);
-  }
 
 }

@@ -1,36 +1,43 @@
+<ion-content  text-center class="bg-image no-scroll">
+  <div class="align_login">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <div padding>
+          <ion-item class="items_lis">
+            <ion-icon name="person" item-start></ion-icon>
+            <ion-input icon-only name="name" type="text" placeholder="User" ngModel required></ion-input>
+          </ion-item>
+          <ion-item class="items_lis">
+            <ion-icon name="key" item-start></ion-icon>
+            <ion-input icon-only name="confirm" type="password" placeholder="Pass" ngModel required
+              *ngIf="!showPasswordText" (ionBlur)="Focus=false" (ionFocus)="Focus=true" minlength="8"></ion-input>
+            <button ion-button clear icon-only type="button" item-right
+              (click)="showPasswordText = !showPasswordText">
+              <ion-icon *ngIf="!showPasswordText" name="eye"> </ion-icon>
+              <ion-icon *ngIf="showPasswordText" name="eye-off"> </ion-icon>
+            </button>
+          </ion-item>
+        </div>
+      </ion-row>
+    </ion-grid>
+  </div>
 
-<ion-content center>
 
- 
-  <ion-list radio-group (ionChange)="changeLanguages();" [(ngModel)]="languages">
+  <div class="section_buttoms">
+    <button ion-button class="button_blue" block [navPush]="listPage">LOGIN</button>
+    <button ion-button class="button_blue" block [navPush]="registerPage">REGISTER </button>
+  </div>
+  <!-- <h3>SUBASTAME</h3>
 
-    <ion-list-header>
-      Idioma
-    </ion-list-header>
-  
-    <ion-item>
-      <ion-label>Español</ion-label>
-      <ion-radio value="es"></ion-radio>
-    </ion-item>
 
-    <ion-item>
-      <ion-label>English</ion-label>
-      <ion-radio value="en"></ion-radio>
-    </ion-item>
-  
-  
-  
-  </ion-list>
-  <h3>{{ 'SUBASTAME' | translate }}</h3>
-  <ion-label  color="primary">{{ 'USER' | translate }}</ion-label>
+
+  <ion-label class="label">USER </ion-label>
   <ion-input [(ngModel)]="user"></ion-input>
-  <ion-label color="primary">{{ 'PASS' | translate }}</ion-label>
+  <ion-label class="label">PASS </ion-label>
   <ion-input [(ngModel)]="password" type="password"></ion-input>
-  <p>
-    <button ion-button color="primary"   (click)="login()" >{{ 'LOGIN' | translate }}</button>
-  </p>
-  <button ion-button [navPush]="registerPage">
-    {{ 'REGISTER' | translate }}
-  </button>
-
+  <section>
+    <button ion-button class="button_blue" block (click)="login()">LOGIN </button>
+    <button ion-button class="button_blue" block [navPush]="registerPage">REGISTER</button>
+  </section>
+ -->
 </ion-content>

@@ -1,3 +1,52 @@
-login-ionic {
+.bg-image {
+  background: url("../../assets/imgs/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.no-scroll .scroll-content {
+  overflow: hidden;
+}
+.button_blue {
+  background-color: dodgerblue !important;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 90%;
+}
+.label {
+  align-self: center;
+}
+.text-input::-webkit-input-placeholder {
+  text-align: center;
+}
 
+.text-input:-moz-placeholder {
+  text-align: center;
+}
+
+.text-input::-moz-placeholder {
+  text-align: center;
+}
+
+.text-input:-ms-input-placeholder {
+  text-align: center;
+}
+.items_lis {
+  background-color: transparent;
+  opacity: 0.8;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  
+}
+.section_buttoms {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.align_login {
+  height: 100%;
+  display: block;
+  display: flex !important;
+  align-content: center !important;
+  align-items: center !important;
 }
