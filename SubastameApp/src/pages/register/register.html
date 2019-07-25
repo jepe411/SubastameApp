@@ -1,29 +1,42 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>Registro</ion-title>
+    <ion-title>Registro</ion-title>    
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
-  <h3>Registro</h3>
+<ion-content padding class="bg-image">  
 
   <form (ngSubmit)="logForm()">
     <ion-item>
-      <ion-label>Nombre:</ion-label>
-      <ion-input type="text" [(ngModel)]="user.name" name="name"></ion-input>
+      <ion-label class="label_reg">Nombre </ion-label>      
+      <ion-input required type="text" class="input_reg"  [(ngModel)]="user.name" name="name"></ion-input>      
     </ion-item>
+    <br>
     <ion-item>
-      <ion-label>Email:</ion-label>
+      <ion-label position="stacked">Email</ion-label>
       <ion-input type="text" [(ngModel)]="user.mail" name="mail"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Email:</ion-label>
       <ion-input type="text" [(ngModel)]="user.mail" name="mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Floating Label</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="fixed">Fixed Label</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">Stacked Label</ion-label>
+      <ion-input></ion-input>
     </ion-item>
 
-    <button ion-button type="submit" block>Add Todo</button>
+    <button ion-button class="button_blue" type="submit" block>Crear Cuenta</button>
   </form>
 
 </ion-content>
