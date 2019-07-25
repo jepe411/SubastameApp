@@ -1,5 +1,5 @@
 .bg-image {
-  background: url("../../assets/imgs/background.jpg") no-repeat center center fixed;
+  background: $app-background;
   background-size: cover;
 }
 .no-scroll .scroll-content {
@@ -18,25 +18,30 @@
 }
 .text-input::-webkit-input-placeholder {
   text-align: center;
+  color: rgb(16, 158, 151);
+}
+.input_transparent {
+  background-color: whitesmoke;  
 }
 
 .text-input:-moz-placeholder {
   text-align: center;
+  
 }
 
 .text-input::-moz-placeholder {
   text-align: center;
+  
 }
 
 .text-input:-ms-input-placeholder {
   text-align: center;
+  
 }
 .items_lis {
-  background-color: transparent;
+  background-color: transparent;  
   opacity: 0.8;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  
+  border-bottom: none; 
 }
 .section_buttoms {
   position: fixed;

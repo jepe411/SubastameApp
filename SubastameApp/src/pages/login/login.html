@@ -1,15 +1,20 @@
-<ion-content  text-center class="bg-image no-scroll">
-  <div class="align_login">
-    <ion-grid>
-      <ion-row color="primary" justify-content-center>
+<ion-content  text-center class="bg-image no-scroll"> 
+  <hr>
+  <hr>  
+  <div>      
+    <ion-grid>        
+      <ion-row color="primary" justify-content-center>          
+          <img alt="logo" height="140"   src="../../assets/imgs/logoApp.png" > 
+          
         <div padding>
-          <ion-item class="items_lis">
-            <ion-icon name="person" item-start></ion-icon>
-            <ion-input icon-only name="name" type="text" placeholder="User" ngModel required></ion-input>
+          <ion-item  class="items_lis">
+            <ion-icon name="contact" color="light" item-start></ion-icon>
+            <ion-input icon-only name="name" class="input_transparent" type="text" placeholder="Username" ngModel required></ion-input>
           </ion-item>
+          <hr>
           <ion-item class="items_lis">
-            <ion-icon name="key" item-start></ion-icon>
-            <ion-input icon-only name="confirm" type="password" placeholder="Pass" ngModel required
+            <ion-icon name="key" color="light"  item-start></ion-icon>
+            <ion-input icon-only name="confirm" class="input_transparent" type="password" placeholder="Password" ngModel required
               *ngIf="!showPasswordText" (ionBlur)="Focus=false" (ionFocus)="Focus=true" minlength="8"></ion-input>
             <button ion-button clear icon-only type="button" item-right
               (click)="showPasswordText = !showPasswordText">
@@ -22,22 +27,14 @@
     </ion-grid>
   </div>
 
-
-  <div class="section_buttoms">
-    <button ion-button class="button_blue" block (click)="login()">LOGIN</button>
-    <button ion-button class="button_blue" block [navPush]="registerPage">REGISTER </button>
+  <div class="section_buttoms">    
+    <button ion-button class="button_blue" block [navPush]="listPage">LOGIN</button>
+    <button ion-button class="button_blue" block [navPush]="registerPage">REGISTER </button> 
   </div>
-  <!-- <h3>SUBASTAME</h3>
+  <p>
+      <ion-text color="light">
+       Developed by <br> Fegiti Innovación y Tecnología
+      </ion-text>
+  </p>
 
-
-
-  <ion-label class="label">USER </ion-label>
-  <ion-input [(ngModel)]="user"></ion-input>
-  <ion-label class="label">PASS </ion-label>
-  <ion-input [(ngModel)]="password" type="password"></ion-input>
-  <section>
-    <button ion-button class="button_blue" block (click)="login()">LOGIN </button>
-    <button ion-button class="button_blue" block [navPush]="registerPage">REGISTER</button>
-  </section>
- -->
 </ion-content>
