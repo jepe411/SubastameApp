@@ -1,3 +1,30 @@
 page-register {
 
+    .bg-image {
+        background: url("../../assets/imgs/background.png");
+        background-size: cover;
+      }
+
+      .button_blue {
+        background-color: rgb(30, 191, 255) !important;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 90%;
+      }
+
+      .input_transparent {
+        background-color: whitesmoke;  
+      }
+
+      .items_reg {
+        background-color: transparent;  
+        opacity: 0.8;
+        border-bottom: none;         
+      }
+      .label_reg{
+          position: stacked;
+      }
+
 }
